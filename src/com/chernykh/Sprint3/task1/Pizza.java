@@ -53,14 +53,7 @@ public class Pizza {
         }
 
         public Pizza build() {
-            Pizza newPizza = new Pizza();
-            newPizza.cheese = this.pizza.cheese;
-            newPizza.meat = this.pizza.meat;
-            newPizza.seafood = this.pizza.seafood;
-            newPizza.vegetable = this.pizza.vegetable;
-            newPizza.mushroom = this.pizza.mushroom;
-
-            return newPizza;
+            return this.pizza;
         }
     }
 }

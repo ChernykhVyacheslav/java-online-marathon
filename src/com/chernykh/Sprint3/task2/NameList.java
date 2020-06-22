@@ -1,7 +1,5 @@
 package com.chernykh.Sprint3.task2;
 
-import java.util.NoSuchElementException;
-
 public class NameList {
 
     private String[] names = {"Mike", "Emily", "Nick", "Patrick", "Sara"};
@@ -23,12 +21,7 @@ public class NameList {
         }
 
         public String next() {
-            if (hasNext()) {
-                counter++;
-            } else {
-                throw new NoSuchElementException();
-            }
-            return names[counter - 1];
+            return names[counter++];
         }
     }
 

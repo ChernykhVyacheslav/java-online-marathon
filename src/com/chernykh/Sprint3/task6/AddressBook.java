@@ -42,11 +42,7 @@ public class AddressBook implements Iterable {
     }
 
     private NameAddressPair[] growArray() {
-        NameAddressPair[] newAddressBook = new NameAddressPair[addressBook.length * 2];
-        for (int i = 0; i < counter; i++) {
-            newAddressBook[i] = addressBook[i];
-        }
-        return newAddressBook;
+        return Arrays.copyOf(addressBook, addressBook.length * 2);
     }
 
     public String read(String firstName, String lastName) {
