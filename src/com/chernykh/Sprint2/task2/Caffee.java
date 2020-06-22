@@ -17,7 +17,7 @@ public class Caffee implements DrinkReceipt, DrinkPreparation, Rating {
 
     @Override
     public Map<String, Integer> makeDrink() {
-        if(ingredients.isEmpty()) {
+        if (ingredients.isEmpty()) {
             ingredients.put("Water", 100);
             ingredients.put("Arabica", 20);
         }
@@ -31,7 +31,7 @@ public class Caffee implements DrinkReceipt, DrinkPreparation, Rating {
 
     @Override
     public DrinkReceipt addComponent(String componentName, int componentCount) {
-        if(!ingredients.containsKey(componentName)) {
+        if (!ingredients.containsKey(componentName)) {
             ingredients.put(componentName, componentCount);
         }
         return this;

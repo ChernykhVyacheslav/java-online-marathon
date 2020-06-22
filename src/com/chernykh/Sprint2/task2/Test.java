@@ -14,8 +14,8 @@ public class Test {
         coffees.add(new Caffee("Caffee", 6));
         System.out.println(new MyUtils().averageRating(coffees));
 
-        for (Caffee caffee:
-             coffees) {
+        for (Caffee caffee :
+                coffees) {
             System.out.println(caffee.makeDrink());
         }
     }

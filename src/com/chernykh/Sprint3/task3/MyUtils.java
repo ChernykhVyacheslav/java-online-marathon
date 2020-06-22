@@ -49,7 +49,7 @@ public class MyUtils {
         Strategy strategy = new Strategy() {
             @Override
             public double doOperation(int a, int b) {
-                return (double)a / (double)b;
+                return (double) a / (double) b;
             }
         };
         execute(a, b, strategy);

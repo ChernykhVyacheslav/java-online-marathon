@@ -8,7 +8,7 @@ public class MyUtils {
 
     public List<Employee> largestEmployees(List<Employee> workers) {
         List<Employee> bestEmployees = new ArrayList<>();
-        if(workers == null || workers.isEmpty()) {
+        if (workers == null || workers.isEmpty()) {
             return bestEmployees;
         }
 
@@ -28,7 +28,7 @@ public class MyUtils {
     }
 
     private List<Employee> getTheMostProductiveEmployees(List<Employee> workers) {
-        if(workers.isEmpty()) {
+        if (workers.isEmpty()) {
             return null;
         }
         Employee bestEmployee = Collections.max(workers, new ProductivenessComparator());
@@ -39,7 +39,7 @@ public class MyUtils {
     }
 
     private List<Employee> getTheMostExperiencedEmployees(List<Employee> workers) {
-        if(workers.isEmpty()) {
+        if (workers.isEmpty()) {
             return null;
         }
         Employee bestEmployee = Collections.max(workers, new ExperienceComparator());
@@ -60,9 +60,9 @@ public class MyUtils {
     private class ExperienceComparator implements Comparator<Employee> {
 
         public int compare(Employee e1, Employee e2) {
-            if(e1.getExperience() < e2.getExperience())
+            if (e1.getExperience() < e2.getExperience())
                 return -1;
-            if(e1.getExperience() > e2.getExperience())
+            if (e1.getExperience() > e2.getExperience())
                 return 1;
             return 0;
         }

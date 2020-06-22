@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee> {
 
     private String name;
     private int experience;
@@ -67,9 +67,9 @@ public class Employee implements Comparable<Employee>{
         Employee other = (Employee) obj;
         if (getName() != other.getName())
             return false;
-        if(getExperience() != other.getExperience())
+        if (getExperience() != other.getExperience())
             return false;
-        if(getPayment().compareTo(other.getPayment()) != 0) {
+        if (getPayment().compareTo(other.getPayment()) != 0) {
             return false;
         }
         return true;

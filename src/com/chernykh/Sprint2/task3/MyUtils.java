@@ -48,7 +48,7 @@ public class MyUtils {
             }
         }
 
-        if(students.isEmpty()) {
+        if (students.isEmpty()) {
             return null;
         }
 

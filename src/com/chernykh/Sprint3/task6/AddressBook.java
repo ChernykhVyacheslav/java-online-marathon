@@ -85,8 +85,8 @@ public class AddressBook implements Iterable {
         NameAddressPair[] newAddressBook = new NameAddressPair[addressBook.length];
 
         for (int i = 0, j = 0; i + j < counter; i++) {
-            if(i == index) {
-               j++;
+            if (i == index) {
+                j++;
             }
             newAddressBook[i] = addressBook[i + j];
         }

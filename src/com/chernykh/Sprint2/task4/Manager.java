@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Manager extends Employee implements Comparable<Employee>{
+public class Manager extends Employee implements Comparable<Employee> {
 
     private double coefficient;
 
@@ -39,7 +39,7 @@ public class Manager extends Employee implements Comparable<Employee>{
                 .thenComparing(Manager::getCoefficient)
                 .compare(this, o);
     }
-    
+
     @Override
     public int hashCode() {
         final int prime = 17;
@@ -60,9 +60,9 @@ public class Manager extends Employee implements Comparable<Employee>{
         Manager other = (Manager) obj;
         if (!Objects.equals(getName(), other.getName()))
             return false;
-        if(getExperience() != other.getExperience())
+        if (getExperience() != other.getExperience())
             return false;
-        if(getPayment().divide(new BigDecimal(getCoefficient())).compareTo(
+        if (getPayment().divide(new BigDecimal(getCoefficient())).compareTo(
                 other.getPayment().divide(new BigDecimal(other.getCoefficient()))) != 0) {
             return false;
         }

@@ -19,7 +19,7 @@ public class Employee {
 
         String employeesInfo = "[";
 
-        for(Employee tempEmployee : employees) {
+        for (Employee tempEmployee : employees) {
             employeesInfo += String.format("{fullName: \"%s\", salary: %s}",
                     tempEmployee.fullName, Float.toString(tempEmployee.salary));
         }
