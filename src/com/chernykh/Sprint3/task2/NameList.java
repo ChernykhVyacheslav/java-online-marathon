@@ -23,7 +23,7 @@ public class NameList {
         }
 
         public String next() {
-            if(hasNext()) {
+            if (hasNext()) {
                 counter++;
             } else {
                 throw new NoSuchElementException();

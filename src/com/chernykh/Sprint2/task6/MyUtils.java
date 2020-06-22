@@ -10,7 +10,7 @@ public class MyUtils {
 
     public List<Shape> maxAreas(List<Shape> shapes) {
         List<Shape> maxShapes = new ArrayList<>();
-        if(shapes == null || shapes.isEmpty()) {
+        if (shapes == null || shapes.isEmpty()) {
             return maxShapes;
         }
 

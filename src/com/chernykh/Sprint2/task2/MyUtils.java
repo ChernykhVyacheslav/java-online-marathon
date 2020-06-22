@@ -23,7 +23,7 @@ public class MyUtils {
                 p -> p.getClass().equals(caffeeClass)
         ).collect(Collectors.toCollection(ArrayList::new));
         double sum = 0;
-        for (Caffee tempCaffee:
+        for (Caffee tempCaffee :
                 tempArray) {
             sum += tempCaffee.getRating();
         }
