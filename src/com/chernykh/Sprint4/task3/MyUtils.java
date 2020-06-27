@@ -26,4 +26,9 @@ public class MyUtils {
         return result;
     }
 
+    public boolean listMapCompare2(List<String> list, Map<String, String> map) {
+        return list.containsAll(map.values()) && map.values().containsAll(list);
+    }
+
+
 }

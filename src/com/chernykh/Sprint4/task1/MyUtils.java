@@ -13,12 +13,9 @@ public class MyUtils {
                 phones.entrySet()) {
             String contactName = entry.getValue();
             if (!notebook.containsKey(contactName)) {
-                notebook.put(contactName, new ArrayList<>() {{
-                    add(entry.getKey());
-                }});
-            } else {
-                notebook.get(contactName).add(entry.getKey());
+                notebook.put(contactName, new ArrayList<>());
             }
+            notebook.get(contactName).add(entry.getKey());
         }
         return notebook;
     }
