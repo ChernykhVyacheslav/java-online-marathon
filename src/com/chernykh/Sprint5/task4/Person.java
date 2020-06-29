@@ -1,31 +1,29 @@
 package com.chernykh.Sprint5.task4;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class Person {
+
+    private static final String NAME_PATTERN = "^\\p{javaUpperCase}[\\p{javaLowerCase}\\s-]+$";
+    private static final String CODE_PATTERN = "^\\d{10}$";
 
     private String firstName;
     private String lastName;
     private String idCode;
 
-    private static final String NAME_PATTERN = "^\\p{javaUpperCase}[\\p{javaLowerCase}\\s-]+$";
-    private static final String CODE_PATTERN = "^\\d{10}$";
-
     public void setFirstName(String firstName) {
-        checkValidity(firstName, NAME_PATTERN, new NameException("Incorrect value " + firstName + " for firstName " +
-                "(should start from upper case and contains only alphabetic characters and symbols -, _)"));
+        checkValidity(firstName, NAME_PATTERN, new NameException("firstName", firstName));
         this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
-        checkValidity(lastName, NAME_PATTERN, new NameException("Incorrect value " + lastName + " for lastName " +
-                "(should start from upper case and contains only alphabetic characters and symbols -, _)"));
+        checkValidity(lastName, NAME_PATTERN, new NameException("lastName", lastName));
         this.lastName = lastName;
     }
 
     public void setIdCode(String idCode) {
-        checkValidity(idCode, CODE_PATTERN, new CodeException("Incorrect value " + idCode +
-                " for code (should contains exactly 10 digits)"));
+        checkValidity(idCode, CODE_PATTERN, new CodeException(idCode));
         this.idCode = idCode;
     }
 
@@ -37,28 +35,28 @@ public class Person {
 
     public static Person buildPerson(String firstName, String lastName, String idCode) {
         Person newPerson = new Person();
-        String errorMessage = "";
+        StringJoiner errorMessage = new StringJoiner("; ");
 
         try {
             newPerson.setFirstName(firstName);
         } catch (NameException e) {
-            errorMessage += "; " + e.getMessage();
+            errorMessage.add(e.getMessage());
         }
 
         try {
             newPerson.setLastName(lastName);
         } catch (NameException e) {
-            errorMessage += "; " + e.getMessage();
+            errorMessage.add(e.getMessage());
         }
 
         try {
             newPerson.setIdCode(idCode);
         } catch (CodeException e) {
-            errorMessage += "; " + e.getMessage();
+            errorMessage.add(e.getMessage());
         }
 
-        if(!errorMessage.isEmpty()) {
-            throw new IllegalArgumentException(errorMessage.substring(2));
+        if(errorMessage.length() > 0) {
+            throw new IllegalArgumentException(errorMessage.toString());
         }
 
         return newPerson;

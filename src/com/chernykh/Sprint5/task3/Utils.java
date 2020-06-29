@@ -6,14 +6,12 @@ public class Utils {
 
 
     public static Plant tryCreatePlant(String type, String color, String name) {
-        Plant newPlant;
         try {
-            newPlant = new Plant(type, color, name);
+            return new Plant(type, color, name);
         } catch (ColorException e) {
-            newPlant = tryCreatePlant(type, Color.RED.name(), name);
+            return tryCreatePlant(type, Color.RED.name(), name);
         } catch (TypeException e) {
-            newPlant = tryCreatePlant(Type.ORDINARY.name(), color, name);
+            return tryCreatePlant(Type.ORDINARY.name(), color, name);
         }
-        return newPlant;
     }
 }

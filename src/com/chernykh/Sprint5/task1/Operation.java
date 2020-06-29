@@ -10,11 +10,10 @@ public class Operation {
     }
 
     public static int trySquareRectangle(int a, int b) {
-        int result = -1;
         try {
-            result = squareRectangle(a, b);
-        } finally {
-            return result;
+            return squareRectangle(a, b);
+        } catch (IllegalArgumentException e) {
+            return -1;
         }
     }
 
