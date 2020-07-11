@@ -6,7 +6,13 @@ public class Accountant {
 
     public static int sum(int x, int y) {
         ParallelCalculator sumCalculator = new ParallelCalculator(Integer::sum, x, y);
-        sumCalculator.run();
+        Thread thread = new Thread(sumCalculator);
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return sumCalculator.result;
     }
 }

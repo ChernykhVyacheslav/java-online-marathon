@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class CheckCamelCase {
 
-    public static final String CAMELCASE_PATTERN = "^[a-z]+([A-Z][a-z0-9]+)*";
+    public static final String CAMELCASE_PATTERN = "^[a-z]+([A-Z][a-z0-9]+)*$";
 
     public static boolean checkAndPrint(Class<?> clazz) {
         if(Objects.isNull(clazz)) {

@@ -12,7 +12,7 @@ public class Test {
     public static void main(String[] args) {
         try {
             Method method = Util.class.getDeclaredMethod("review", String.class);
-            method.invoke(new Util(), "Class3");
+            method.invoke(new Util(), "com.chernykh.sprint7.task2.task2test.Class3");
         }
         catch (Exception e) {
             System.out.println("Oops");
@@ -27,10 +27,7 @@ class Util {
             Class<?> providedClass = Class.forName(className);
             if(providedClass.isAnnotationPresent(Review.class)) {
                 Review review = providedClass.getAnnotation(Review.class);
-                String dateString = LocalDate.now().toString();
-                if(!review.date().equals("today")) {
-                    dateString = review.date();
-                }
+                String dateString = "today".equals(review.date()) ? LocalDate.now().toString() : review.date();
                 System.out.println("Class " + className + " was reviewed "
                         + dateString + " by " +
                         review.reviewer() + ".");

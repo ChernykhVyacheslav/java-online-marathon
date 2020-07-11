@@ -16,7 +16,7 @@ public class ParallelCalculator implements Runnable {
     }
 
     @Override
-    public synchronized void run() {
+    public void run() {
         result = operation.apply(operand1, operand2);
     }
 }

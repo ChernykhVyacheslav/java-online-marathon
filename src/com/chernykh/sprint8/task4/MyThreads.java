@@ -38,7 +38,7 @@ public class MyThreads {
                     System.out.println("Thread2 n = " + n);
                 }
                 System.out.println("Thread2 success!");
-                obj.notify();
+                obj.notifyAll();
             }
         }
     };

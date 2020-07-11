@@ -9,10 +9,7 @@ public class Util {
             Class<?> providedClass = Class.forName(className);
             if(providedClass.isAnnotationPresent(Review.class)) {
                 Review review = providedClass.getAnnotation(Review.class);
-                String dateString = LocalDate.now().toString();
-                if(!review.date().equals("today")) {
-                    dateString = review.date();
-                }
+                String dateString = "today".equals(review.date()) ? LocalDate.now().toString() : review.date();
                 System.out.println("Class " + className + " was reviewed "
                         + dateString + " by " +
                         review.reviewer() + ".");
