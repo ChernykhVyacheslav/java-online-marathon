@@ -1,0 +1,6 @@
+[submodule "final-project-softserve"]
+	path = final-project-softserve
+	url = https://github.com/ChernykhVyacheslav/final-project-softserve
+[submodule "Sprint11-AddressBook"]
+	path = Sprint11-AddressBook
+	url = https://github.com/ChernykhVyacheslav/Sprint11-AddressBook.git
