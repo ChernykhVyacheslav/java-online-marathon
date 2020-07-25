@@ -4,3 +4,6 @@
 [submodule "Sprint11-AddressBook"]
 	path = Sprint11-AddressBook
 	url = https://github.com/ChernykhVyacheslav/Sprint11-AddressBook.git
+[submodule "sprint13-hibernate"]
+	path = sprint13-hibernate
+	url = https://github.com/ChernykhVyacheslav/sprint13-hibernate.git
