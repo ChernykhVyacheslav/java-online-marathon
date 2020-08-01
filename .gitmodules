@@ -1,5 +1,5 @@
 [submodule "final-project-softserve"]
-	path = final-project-softserve
+	path = sprint12-spring-teamwork
 	url = https://github.com/ChernykhVyacheslav/final-project-softserve
 [submodule "Sprint11-AddressBook"]
 	path = Sprint11-AddressBook
@@ -7,3 +7,9 @@
 [submodule "sprint13-hibernate"]
 	path = sprint13-hibernate
 	url = https://github.com/ChernykhVyacheslav/sprint13-hibernate.git
+[submodule "sprint14-spring-mvc"]
+	path = sprint14-spring-mvc
+	url = https://github.com/ChernykhVyacheslav/sprint14-spring-mvc.git
+[submodule "sprint15-spring-unit-tests"]
+	path = sprint15-spring-unit-tests
+	url = https://github.com/ChernykhVyacheslav/sprint15-spring-unit-tests.git
