@@ -13,3 +13,6 @@
 [submodule "sprint15-spring-unit-tests"]
 	path = sprint15-spring-unit-tests
 	url = https://github.com/ChernykhVyacheslav/sprint15-spring-unit-tests.git
+[submodule "sprint17-spring-security"]
+	path = sprint17-spring-security
+	url = https://github.com/ChernykhVyacheslav/sprint17-spring-security.git
